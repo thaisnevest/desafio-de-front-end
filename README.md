@@ -1,54 +1,122 @@
-# Desafio de Front-end
+# Weather App ⁺₊⋆ ☁︎ ☀︎ ☁︎ ⋆⁺₊
 
-Criar um web app que liste cidades específicas (listadas abaixo) e, após a seleção de alguma por parte do usuário, exiba uma tela de detalhes da cidade escolhida com informações do seu clima através de uma API pública de dados meteorológicos.
+Aplicação desenvolvida em Next.js para exibir informações climáticas de cidades pré-definidas utilizando a API OpenWeather.
 
-## Sugestões de APIs
+## ✮ Live Demo 
 
-- https://www.openweathermap.org/current
-- https://www.weatherapi.com
+[Weather App](https://weather-app-tds.vercel.app/)
 
-## Layout
+## Tecnologias
 
-- [Link do layout no Figma](https://www.figma.com/design/4lcFZPwbuAxjBiUutFK9Qd)
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Jest
+- React Testing Library
+- Docker
+- OpenWeather API
 
-## Hospedagem
+## Cidades Disponíveis
 
-O projeto precisa ser publicado numa das duas opções abaixo:
+- Dallol (NG)
+- Fairbanks (US)
+- Londres (GB)
+- Recife (BR)
+- Vancouver (CA)
+- Yakutsk (RU)
 
-- [Netlify](https://www.netlify.com)
-- [Vercel](https://www.vercel.com)
+## Funcionalidades
 
-## Requisitos de avaliação
+- Seleção de cidades pré-definidas
+- Exibição da temperatura atual
+- Temperaturas mínima e máxima do dia
+- Exibição das temperaturas para:
+  - Dawn (03:00)
+  - Morning (09:00)
+  - Afternoon (15:00)
+  - Night (21:00)
+- Informações de:
+  - Umidade
+  - Velocidade do vento
+  - Nascer do sol
+  - Pôr do sol
+- Ícones climáticos dinâmicos
+- Layout responsivo para smartphone, tablet e desktop
 
-- Faça um fork deste repositório;
-- As cidades listadas devem ser:
-    - Dallol (NG);
-    - Fairbanks (US);
-    - Londres (GB);
-    - Recife (BR);
-    - Vancouver (CA);
-    - Yakutsk (RU).
-- Implementação de testes unitários;
-- Fidelidade ao layout enviado (estamos enviando o layout mobile e desktop);
-- Frameworks JavaScript opcional (de preferência, nesta ordem 😉):
-    - React com Next.js
-    - React com Vite;
-    - Vue;
-    - Angular.
-- Responsividade atendendo 3 breakpoints:
-    - Smartphone;
-    - Tablet;
-    - Desktop.
+## Testes
 
-## Observações
+Para executar os testes:
 
-- Você deve usar os ícones do layout que melhor se encaixarem em cada condição climática;
-- Considere os horários 3:00, 9:00, 15:00 e 21:00 para as definições das temperaturas de Dawn, Morning, Afternoon, Night, respectivamente.
+```bash
+pnpm test
+```
 
-## Diferenciais
+Os testes cobrem:
 
-- Rodar a aplicação fazendo o uso de um container do Docker.
+- Mapeamento de ícones climáticos
+- Cálculo de temperatura mínima e máxima
+- Mapeamento dos períodos do dia
+- Renderização da página de detalhes da cidade
 
-Agora é com você! Faça o fork e responda o nosso contato com o link, ok?
+## Executando Localmente
 
-Boa sorte!
+### 1. Clone o repositório
+
+```bash
+git clone <repository-url>
+```
+
+### 2. Instale as dependências
+
+```bash
+pnpm install
+```
+
+### 3. Configure as variáveis de ambiente
+
+Crie um arquivo `.env.local` na raiz do projeto:
+
+```env
+OPENWEATHER_API_KEY=your_api_key
+```
+
+### 4. Execute o projeto
+
+```bash
+pnpm dev
+```
+
+A aplicação estará disponível em:
+
+```txt
+http://localhost:3000
+```
+
+## Docker
+
+Construir a imagem:
+
+```bash
+docker build -t weather-challenge .
+```
+
+Executar o container:
+
+```bash
+docker run -p 3000:3000 weather-challenge
+```
+
+## Requisitos Atendidos
+
+- ✅ Next.js
+- ✅ Integração com OpenWeather API
+- ✅ Fidelidade ao layout fornecido
+- ✅ Responsividade para smartphone, tablet e desktop
+- ✅ Testes unitários
+- ✅ Docker
+- ✅ Deploy na Vercel
+
+## 👩🏻‍💻 Autora
+
+**Thaís Neves** - thaisnevesst@gmail.com

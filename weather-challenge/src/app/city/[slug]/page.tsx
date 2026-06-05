@@ -65,7 +65,7 @@ const metrics: Metric[] = [
 ];
 
   return (
-    <main className={`min-h-screen flex flex-col justify-center items-center gap-6 px-4 md:gap-10 lg:gap-12 ${
+    <main className={`min-h-screen flex flex-col justify-center items-center gap-6 py-8 px-4 ${
       isCold ? "bg-[#CACACA] text-[#0F0F0F]" : "bg-[#2CAEFF] text-[#F9F9F9]"
     }`}>   
         <div className="gap-1 text-center">
@@ -77,17 +77,18 @@ const metrics: Metric[] = [
 
         <Image src={getWeatherIcon(weather.main)} alt={weather.main} width={176} height={176} className={weather.temperature >= 0 ? "invert" : "" }/>
 
-        <div className="flex flex-wrap justify-center gap-12 text-xl">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-12 text-xl">
             {forecasts.map((forecast) => (
                 <ForecastCard key={forecast.name} forecast={forecast} />
             ))}
         </div>
         
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:mt-10">
             {metrics.map((metric) => (
                 <MetricCard key={metric.name} metric={metric} />
             ))}
         </div>
+
             
     </main>
   );
